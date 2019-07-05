@@ -10,5 +10,10 @@ function my_clock(el){
     setTimeout(() => {my_clock(el)}, 1000);
 }
 
+// 打开后台页
+$('#open_editor').click(e => {
+    window.open(chrome.extension.getURL('background.html'));
+});
+
 let clock_div = document.getElementById('clock_div');
 my_clock(clock_div);
